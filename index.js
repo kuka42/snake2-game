@@ -15,7 +15,7 @@ function gameInit() {
     canvasContext = canvas.getContext('2d');
     canvas.width = 600;
     canvas.height = 600;
-    canvasContext.fillStyle = "#FFFFFF";
+    canvasContext.fillStyle = "#eeeeee";
     canvasContext.font = "30px monospace";
 
     createSnake();
@@ -91,17 +91,17 @@ function drawGame() {
 
     // rysowanie węża
     for (var i = 0; i < snake.length; i++) {
-        canvasContext.fillStyle = "#FFFFFF";
+        canvasContext.fillStyle = "#eeeeee";
         canvasContext.fillRect(snake[i].x * snakeSize, snake[i].y * snakeSize, snakeSize, snakeSize);
     }
 
     // rysowanie jedzenia
-    canvasContext.fillStyle = "#FFFFFF";
+    canvasContext.fillStyle = "#eeeeee";
     canvasContext.fillRect(foodX * snakeSize, foodY * snakeSize, snakeSize, snakeSize);
 
 // rysowanie wyniku
 canvasContext.fillStyle = "#eeeeee";
-canvasContext.fillText("Score: " + score, 5, 20);
+canvasContext.fillText("score: " + score, 5, 20);
 
 }
 
